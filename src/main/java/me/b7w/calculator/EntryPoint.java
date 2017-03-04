@@ -1,16 +1,17 @@
 package me.b7w.calculator;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
+
+import javax.inject.Inject;
 
 @Component
 public class EntryPoint implements CommandLineRunner {
 
-    @Autowired
+    @Inject
     private CalculatorBefore before;
 
-    @Autowired
+    @Inject
     private CalculatorAfter after;
 
     @Override

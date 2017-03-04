@@ -1,15 +1,16 @@
 package me.b7w.calculator;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+
+import javax.inject.Inject;
 
 @Component
 public class CalculatorAfter implements Calculator {
 
-    @Autowired
+    @Inject
     private CalculatorPlusStrategy plusStrategy;
 
-    @Autowired
+    @Inject
     private CalculatorSubtractStrategy subtractStrategy;
 
     @Override
