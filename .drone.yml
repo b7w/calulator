@@ -1,5 +1,21 @@
-pipeline:
-    build:
+---
+kind: pipeline
+name: testing
+
+steps:
+    -   name: te
+        pull: always
+        image: maven
+        commands:
+            - mvn -q test
+
+---
+kind: pipeline
+name: building
+
+steps:
+    -   name: build
+        pull: always
         image: maven
         commands:
             - mvn -q clean package
